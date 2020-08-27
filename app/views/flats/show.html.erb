@@ -1,0 +1,39 @@
+<img class="flat-image-show" src="<%=@flat.image_url%>" alt="">
+
+<div class="show-container">
+  <div class="left">
+  <div class="title">
+    <h1><strong><%= @flat.name %></strong></h1>
+    <h5><%= @flat.address %></h5>
+  </div>
+  <div class="description">
+    <h5> <strong>A bit more information about the property...</strong></h5>
+    <p><%= @flat.description %></p>
+    <img class="map w-100" src="https://media.wired.com/photos/59269cd37034dc5f91bec0f1/master/w_1164,c_limit/GoogleMapTA.jpg">
+  </div>
+</div>
+<div class="right">
+  <div class="book">
+    <h4><strong>Book Property</strong></h4>
+    <form>
+        <label for="checkin" >Check In Date</label>
+          <input type="date" class="form-control" id="checkin" placeholder="Check In">
+          <br>
+        <label for="checkout">Check Out Date</label>
+          <input type="date" class="form-control" id="checkout" placeholder="Check Out">
+            <button type="submit" class="btn btn-dark">Check Availability</button>
+      </form>
+  </div>
+  <div class="details">
+    <h6><strong>Maximum Number Of Guests:</strong></h6> <p> <%= @flat.number_of_guests %> <i class="fas fa-users"></i></p>
+    <h6><strong>Price Per Night:</strong></h6><p>$<%= @flat.price_per_night %> AUD</p>
+  </div>
+  <div class="share">
+    <h5>Share Property</h5>
+    <a href="#"><i class="fab fa-facebook-square"></i></a>
+    <a href="#"><i class="fas fa-envelope-square"></i></a>
+    <a href="#"><i class="fab fa-pinterest-square"></i></a>
+    <a href="#"><i class="fab fa-twitter-square"></i></a>
+  </div>
+</div>
+</div>

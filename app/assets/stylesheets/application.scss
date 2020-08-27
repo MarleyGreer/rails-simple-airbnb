@@ -1,0 +1,59 @@
+// Graphical variables
+@import "config/fonts";
+@import "config/colors";
+@import "config/bootstrap_variables";
+
+// External libraries
+@import "bootstrap/scss/bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+// Your CSS partials
+@import "components/index";
+@import "pages/index";
+
+.container{
+  margin-top: 250px;
+}
+
+.container-normal {
+  width: 800px;
+  margin: auto;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.container-home {
+ width: 800px;
+ margin: 8px auto;
+ background: white;
+ text-align: center;
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: center;
+ box-shadow: 12px 8px 26px lightgrey;
+ padding: 16px 8px;
+}
+
+
+.flat-item {
+  width: 300px;
+  margin: 8px;
+  box-shadow: 4px 4px 8px grey;
+}
+
+.card-items {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
+.share a {
+  font-size: 32px;
+  color: black;
+}
+
+.share a:hover {
+  font-size: 32px;
+  color: grey;
+}
