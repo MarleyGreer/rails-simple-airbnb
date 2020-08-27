@@ -1,12 +1,4 @@
 <div class="container-normal">
   <h1>Update Your Flat Details</h1>
-  <%= simple_form_for [@flat] do |f| %>
-    <%= f.input :name, label: 'Name Your Property', error: 'Name Cannot Be Blank!' %>
-    <%= f.input :address, label: 'Enter Your Address', error: 'Address Cannot Be Blank!' %>
-    <%= f.input :description, label: 'Tell Us About Your Place!', error: 'Description Cannot Be Blank!' %>
-    <%= f.input :image_url, label: 'Add A Url For A Photo Of Your Property'%>
-    <%= f.input :number_of_guests, collection: (0..12).to_a  %>
-    <%= f.input :price_per_night, collection: (0..1000).to_a, label: "Price Per Night AUD"%>
-    <%= f.button :submit, class: "btn-dark"%>
-  <% end %>
+  <%= render "form", task: @flat %>
 </div>

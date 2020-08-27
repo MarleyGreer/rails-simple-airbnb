@@ -1,23 +1,23 @@
 <div class="container-home">
   <div><h1>Welcome To Airbnb! <p></p></h1>
-  <p>View all <strong><%= @flats.count %></strong> available flats!</p>
-  <div class="card-items">
-  <% @flats.each do |flat| %>
-  <div class="flat-item">
-    <div class="flat-top">
-      <img class="flat-image" src="<%=flat.image_url%>" alt="">
-      </h3><strong><%= flat.name %></strong></h3>
-      <p>$<%= flat.price_per_night  %>AUD   <i class="fas fa-users">  </i><%= flat.number_of_guests%> </p>
-      <p><em><%= flat.address %></em></p>
+    <p>View all <strong><%= @flats.count %></strong> available flats!</p>
+    <div class="card-items">
+      <% @flats.each do |flat| %>
+        <div class="flat-item">
+        <div class="flat-top">
+          <img class="flat-image" src="<%=flat.image_url%>" alt="">
+          </h3><strong><%= flat.name %></strong></h3>
+          <p><i class="fas fa-dollar-sign"></i><strong><%= flat.price_per_night  %>AUD</strong>   <i class="fas fa-users">  </i><%= flat.number_of_guests%> </p>
+          <p><em><%= flat.address %></em></p>
+        </div>
+        <div class="flat-bottom">
+          <%= link_to "More Info", flat_path(flat) %>
+          <%= link_to "Edit", edit_flat_path(flat)%>
+          <%= link_to "Remove", flat_path(flat), method: :delete, data: { confirm: "Are you sure you wish to delete the listing #{flat.name}?" }%>
+        </div>
+      </div>
+    <% end %>
     </div>
-    <div class="flat-bottom">
-      <%= link_to "More Info", flat_path(flat) %>
-      <%= link_to "Edit", edit_flat_path(flat)%>
-      <%= link_to "Remove", flat_path(flat), method: :delete, data: { confirm: "Are you sure you wish to delete the listing #{flat.name}?" }%>
-    </div>
-    </div>
-  <% end %>
-</div>
-</div>
+  </div>
 </div>
 

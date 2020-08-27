@@ -57,3 +57,13 @@
   font-size: 32px;
   color: grey;
 }
+
+.flat-bottom a {
+  color: black;
+  transition: color 1s ease;
+}
+
+.flat-bottom a:hover {
+  color: grey;
+}
+

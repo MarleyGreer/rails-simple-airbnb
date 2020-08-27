@@ -24,7 +24,7 @@
   margin-top: 240px
 }
 
-.show-container div div{
+.whitebox{
  background: white;
  margin: 24px;
  padding: 16px;
@@ -37,4 +37,10 @@
 
 .right{
   width: 35%;
+}
+
+.share {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
